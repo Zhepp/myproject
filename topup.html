@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top-up Mobile Legends</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .id {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Top-up Mobile Legends</h2>
+        <form action="process.php" method="post">
+            <div class="form-group">
+                <label for="id_ml">Masukan Data Kamu:</label>
+                <div class="id">
+                <input type="text" class="form-control mr-2" id="id_ml" name="id_ml" placeholder="Masukan ID" required><input type="text" class="form-control" id="server" name="server" placeholder="Masukan Server" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="nominal">Jumlah Top-up:</label>
+                <select class="form-control" id="nominal" name="nominal">
+                    <option value="" disabled selected class="jumlah">Pilih Jumlah Topup</option>
+                    <option value="29000">1x Weekly Diamond Pass - Rp 29.000</option>
+                    <option value="3000">11 Diamonds - Rp 3.000</option>
+                    <option value="15000">50 Diamonds - Rp 15.000</option>
+                    <option value="45000">150 Diamonds - Rp 45.000</option>
+                    <option value="75000">250 Diamonds - Rp 75.000</option>
+                    <option value="149000">500 Diamonds - Rp 149.000</option>
+                    <option value="299000">1000 Diamonds - Rp 299.000</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="metode_pembayaran">Metode Pembayaran:</label>
+                <select class="form-control" id="metode_pembayaran" name="metode_pembayaran">
+                    <option value="" disabled selected>Pilih Metode Pembayaran</option>
+                    <option value="OVO">OVO</option>
+                    <option value="GoPay">GoPay</option>
+                    <option value="Dana">Dana</option>
+                    <option value="Shopeepay">Shopeepay</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nomor_pembayaran">Nomor Pembayaran:</label>
+                <input type="text" class="form-control" id="nomor_pembayaran" name="nomor_pembayaran" required placeholder="Masukan Nomor Pembayaran">
+            </div>
+            <div class="form-group">
+                <label for="nomor_pembayaran">Kode Voucher:</label>
+                <input type="text" class="form-control" id="kode_voucher" name="kode_voucher" required placeholder="Masukan Kode Voucher (Opsional)">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
